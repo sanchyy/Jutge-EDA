@@ -1,33 +1,25 @@
 #include <iostream>
-#include <set>
+#include <map>
 using namespace std;
 
+const int LIMIT = 100000000;
+
 int main() {
-    set <int> collatz;
-    int count = 0;
-    int x,y,n;
+    int n, x, y;
+    map<int, int> collatz; //{n,rep}
     while (cin >> x >> y >> n) {
-        while (collatz.find(n) != collatz.end()) {
-            collatz.insert(n);
-            if (n%2 == 0)
-                n = n/2 + x;
-            else
-                n = 3*n+y;
+        bool repe = false;
+        int result = 0;
+        while (not repe && n <= LIMIT) {
+            if (collatz.find(n) != collatz.end()) {
+                result = result - collatz[n];
+                repe = true;
+            }
+            result++;
+            collatz[n] = result;
+            n = (n%2) ? 3*n+y : n/2+x;
         }
-        int aux;
-        count = 1;
-        if (n%2 == 0)
-            n = n/2 + x;
-        else
-            n = 3*n+y;
-        while (aux != n) {
-            if (n%2 == 0)
-                n = n/2 + x;
-            else
-                n = 3*n+y;
-            ++count;
-        }
-        cout << count << endl;
+        collatz.clear();
+        cout << (repe ? result : n)  << endl;
     }
-    
 }
