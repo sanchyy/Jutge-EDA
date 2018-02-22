@@ -8,10 +8,8 @@ int main() {
 	int num;
 	while (cin >> c) {
 
-		if ((c == 'A' or c == 'R' or c == 'D' or c == 'I') and numbers.empty()) {
+		if ((c == 'A' or c == 'R' or c == 'D' or c == 'I') and numbers.empty()) 
 			cout << "error!" << endl;
-		}
-
 
 		else {
 			if (c == 'S') {
