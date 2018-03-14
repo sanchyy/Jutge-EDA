@@ -6,26 +6,34 @@ int main() {
     priority_queue <int> pq;
     string action;
     int number;
-    int max = ;
-    int sum;
+    int max;
+    double sum = 0;
+    bool first = true;
     while (cin >> action) {
-        if (action == "delete") {
+        if (action == "number") {
+            cin >> number;
+            sum += number;
+            if (first) {
+                max = number;
+                first = 0;
+            }
+            else if (max < number)
+                max = number;
+
+            pq.push(-number);
+        }
+
+        else {
             if (pq.empty())
-                cout << "no elements" << endl;
+                first = true;
             else {
-                summ += pq.top();
+                sum += pq.top();
                 pq.pop();
             }
         }
-        
-        else {
-            cin >> number;
-            summ += number;
-            if (number > max)
-                max = number;
-            pq.push(-number);
-            cout << "minimum: " << -pq.top() << ", maximum: " << max << ", average: " << sum/int(pq.size()) << endl;
-        }
-        
+        if (pq.empty())
+            cout << "no elements" << endl;
+        else 
+            cout << "minimum: " << max << ", maximum: " << -pq.top() << ", average: " << sum/int(pq.size()) << endl;
     }
 }
