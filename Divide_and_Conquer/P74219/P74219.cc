@@ -13,7 +13,7 @@ int main() {
 	
 	vector <vector <int> > mat(vector <int> (2));
 	int size = 2;
-	while (read(mat,2)) {
+	while  (read(mat,2)) {
 		int n,m; cin >> n >> m;
 		
 	}

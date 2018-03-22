@@ -5,14 +5,6 @@ using namespace std;
 // k imparell: n^k = (n^(k/2))²*n
 
 int i_pow(int base, int exponent, int modul) {
-	/*int result = 1;
-	while (exponent > 0) {
-		if (exponent % 2 == 1) 
-			result = (result * base) % modul;
-		exponent = exponent >> 1;
-		base = (base * base) % modul;
-	}
-	return result;*/
 	
 	if (exponent == 0)
 		return 1;
