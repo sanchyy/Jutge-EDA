@@ -5,7 +5,7 @@ using namespace std;
 
 
 bool imm_resistant_search(double x, const vector <double> &v, int i, int j) {
-	int mid = (j - i -1)/2 + i;
+	int mid = (i + j)/2;
 	if (i > j)
 		return false;
 	if (v[mid] == x)
@@ -16,7 +16,8 @@ bool imm_resistant_search(double x, const vector <double> &v, int i, int j) {
 		return true;
 	else if (v[mid] > x)
 		return imm_resistant_search(x,v,i,mid-1);
-	return imm_resistant_search(x,v,mid+1,j);
+	else if (v[mid] < x)
+		return imm_resistant_search(x,v,mid+1,j);
 }
 
 bool resistant_search(double x, const vector<double>& v) {
