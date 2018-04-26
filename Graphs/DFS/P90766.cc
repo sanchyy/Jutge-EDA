@@ -3,8 +3,9 @@
 using namespace std;
 
 int n,m;
-using Graph = vector <vector <char> >;
-Graph tmap;
+using VC = vector <char>;
+using VVC = vector <VC>;
+VVC tmap;
 
 int dfs(int x, int y) {
 	if (x >= 0 and x < n and y >= 0 and y < m) {
@@ -25,7 +26,7 @@ int dfs(int x, int y) {
 int main() {
 
 	cin >> n >> m;
-	tmap = Graph(n,vector<char>(m));
+	tmap = VVC(n,VC(m));
 	for (int i = 0; i < n; ++i)
 		for (int j = 0; j < m; ++j)
 			cin >> tmap[i][j];

@@ -3,9 +3,10 @@
 using namespace std;
 
 int n,m;
-using Graph = vector <vector <char >>;
+using VC = vector <char>;
+using VVC = vector <VC>;
 
-Graph tmap;
+VVC tmap;
 
 bool dfs(int x, int y) {
 	if (x < 0 or x >= n or y < 0 or y >= m or tmap[x][y] == 'X') return false;
@@ -21,7 +22,7 @@ bool dfs(int x, int y) {
 int main() {
 
 	cin >> n >> m;
-	tmap = Graph(n,vector<char>(m));
+	tmap = VVC(n,VC(m));
 	for (int i = 0; i < n; ++i)
 		for (int j = 0; j < m; ++j)
 			cin >> tmap[i][j];
