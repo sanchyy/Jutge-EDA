@@ -5,7 +5,7 @@ using namespace std;
 int n,m;
 
 bool dfs(vector <vector<char> > &tmap, int x, int y) {
-	if (x < 0 and x >= n and y < 0 and y >= m or tmap[x][y] == 'X') return false;
+	if (x < 0 or x >= n or y < 0 or y >= m or tmap[x][y] == 'X') return false;
 	if (tmap[x][y] == 't') return true;
 	tmap[x][y] = 'X';
 	return (
