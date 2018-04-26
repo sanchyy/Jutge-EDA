@@ -3,7 +3,7 @@
 using namespace std;
  
 
-typedef vector< vector <int> > Graph;
+using Graph =  vector< vector <int> >;
 
 void escriure_graf(const Graph& g) {
     for (int i = 0; i < g.size(); i++) {
