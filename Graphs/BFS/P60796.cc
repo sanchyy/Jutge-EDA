@@ -51,7 +51,4 @@ int main () {
 			cin >> G[i][j];
 	int f,c; cin >> f >> c;
 	solu(f-1,c-1);
-	
-	
-	
 }
