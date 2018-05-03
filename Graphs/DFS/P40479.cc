@@ -3,7 +3,7 @@
 using namespace std;
 
 using VB = vector <bool>;
-using VC = vector <char>;
+using VC = vector <char>;º
 using VVB = vector <VB>;
 using VVC = vector <VC>;
 
