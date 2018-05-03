@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <utility>
 using namespace std;
 
 using VB = vector <bool>;
