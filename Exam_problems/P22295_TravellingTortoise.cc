@@ -20,7 +20,7 @@ const int I[4] = {0, -1,  0, 1};
 const int J[4] = {1,  0, -1, 0};
 
 bool pos_ok(int i, int j) {
-    return (i >= 0 && i < m && j >= 0 && j < n);
+    return (i >= 0 && i < n && j >= 0 && j < m);
 }
 
 void f(int ai, int aj, vector <char> &v) {
