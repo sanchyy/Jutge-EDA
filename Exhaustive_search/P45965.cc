@@ -13,7 +13,7 @@ void f(int k, int o, int u, vector <int> &v) {
     }
     else {
         v[k] = 0; f(k+1, o, u,   v);
-	v[k] = 1; f(k+1, o, u+1, v);
+	    v[k] = 1; f(k+1, o, u+1, v);
     }
 
 }
