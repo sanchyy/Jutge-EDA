@@ -11,13 +11,13 @@ using VVE = vector <VE>;
 int n,m;
 
 list <int> topological_sort() {
-    
+
 }
 
 int main() {
     while (cin >> n) {
         for (int i = 0; i < n; ++i) {
-
+            
         }
         cin >> m;
         for (int i = 0; i < n; ++i) {
